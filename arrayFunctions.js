@@ -9,9 +9,14 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  
+  if (numbers.length % 2 === 1) {
+    return true;
+  }
+  return false;
 }
-
+isArrayLengthOdd([1, 2, 3]);
+isArrayLengthOdd([1, 2, 3, 4]);
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -23,9 +28,14 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+    const isArrayLengthOdd = [1, 2, 3]
+    if (isArrayLengthOdd % 2 === 0) {
+    return false;
+  }
+  return true;
 }
-
+console.log(isArrayLengthEven([1, 2, 3]));
+console.log(isArrayLengthEven([1, 2, 3, 4]));
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -35,9 +45,12 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
-}
+  instructors.push("Laila");
+  console.log(instructors)
+  return instructors;
 
+}
+addLailaToArray(["Mshary", "Hasan"])
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -47,8 +60,10 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+  teams.pop();
+  console.log(teams)
 }
+eliminateTeam(["Brazil", "Germany", "Italy"])
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):

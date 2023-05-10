@@ -15,8 +15,8 @@ function isArrayLengthOdd(numbers) {
   }
   return false;
 }
-isArrayLengthOdd([1, 2, 3]);
-isArrayLengthOdd([1, 2, 3, 4]);
+console.log(isArrayLengthOdd([1, 2, 3]));
+console.log(isArrayLengthOdd([1, 2, 3, 4]));
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -44,13 +44,16 @@ console.log(isArrayLengthEven([1, 2, 3, 4]));
  * e.g.
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
+
 function addLailaToArray(instructors) {
   instructors.push("Laila");
-  console.log(instructors)
   return instructors;
 
 }
 addLailaToArray(["Mshary", "Hasan"])
+
+console.log(addLailaToArray(["Mshary", "Hasan"]));
+
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -60,10 +63,9 @@ addLailaToArray(["Mshary", "Hasan"])
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  teams.pop();
-  console.log(teams)
+  return teams.pop();
 }
-eliminateTeam(["Brazil", "Germany", "Italy"])
+console.log(eliminateTeam(["Brazil", "Germany", "Italy"]));
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -77,8 +79,13 @@ eliminateTeam(["Brazil", "Germany", "Italy"])
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+if (fruits.length % 2 === 0) {
+  return fruits.slice(fruits.length / 2)
+  }
+ return[];
 }
-
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]));
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -95,4 +102,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+  if (shout.includes("!")) {
+    const index = shout.indexOf("!");   //if Hellooooo wasn't there line 102, 105 are enough.
+    return shout.slice(0, index + 1);  
+  }
+  return shout;
 }
+
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+console.log(youGottaCalmDown ("Taylor Schwifting!!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
